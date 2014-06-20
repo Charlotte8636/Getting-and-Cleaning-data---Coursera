@@ -14,10 +14,14 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 > Repository content
  
 This repository contains:
- 1) a tidy data set (TidyDataSet)
- 2) an R script for performing the analysis (run_analysis.R)
- 3) a Code book that describes the variables, the data, and transformations (CodeBook.md)
 
+ 1) This README.md file
+ 
+ 2) an R script for performing the analysis (run_analysis.R)
+ 
+ 3) a Code book that describes the variables, the data, and transformations (CODE BOOK)
+
+The Tidy data set is not included in the repository. It is submitted directly in Coursera "Assignment".
  
 > The tidy data set 
 

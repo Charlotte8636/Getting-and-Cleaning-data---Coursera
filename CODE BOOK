@@ -1,0 +1,59 @@
+CODE BOOK 
+
+>Experimental setting and raw data
+
+The data used for the analysis was built from the recordings of 30 subjects. Each person performed six activities (walking, walking upstairs, walking downstairs, sitting, standing and laying) wearing a smartphone (Samsung Galaxy S II) on the waist with embedded inertial sensors. Using its embedded accelerometer and gyroscope, they captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers were selected for generating the training data and 30% the test data [1].
+
+The raw data set consists of 7352 observations and 563 variables issued through UCI Machine Learning Learning Repository website. For each record in the dataset it is provided: 
+- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration. 
+- Triaxial Angular velocity from the gyroscope. 
+- A 561-feature vector with time and frequency domain variables. 
+- Its activity label. 
+- An identifier of the subject who carried out the experiment. 
+
+About the data, X, Y, and Z are acceleration vectors. The phone’s 3D spatial orientation can be determined using the formula M = Sqrt (X2 + Y2 + Z2). When the phone is at rest, M should be 1.0 (or very close to it). If all X, Y, Z values are 0, then the phone is currently weightless (it’s in outer space or is currently in free fall). If you shake your phone, you can produce acceleration values greater than 1.0. The magnitude of the X, Y, and Z accelerations will never exceed 2.0, even if you shake the phone hard or bang it on the table [2].
+ 
+>The variables contained in the tidy data 
+
+33 variables of the feature vector for each pattern:
+ '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+ •tBodyAcc-XYZ
+ •tGravityAcc-XYZ
+ •tBodyAccJerk-XYZ
+ •tBodyGyro-XYZ
+ •tBodyGyroJerk-XYZ
+ •tBodyAccMag
+ •tGravityAccMag
+ •tBodyAccJerkMag
+ •tBodyGyroMag
+ •tBodyGyroJerkMag
+ •fBodyAcc-XYZ
+ •fBodyAccJerk-XYZ
+ •fBodyGyro-XYZ
+ •fBodyAccMag
+ •fBodyAccJerkMag
+ •fBodyGyroMag
+ •fBodyGyroJerkMag
+ 
+>The set of variables that were estimated from these signals are: 
+•mean(): Mean value
+ •std(): Standard deviation
+ 
+The tidy data set contains 66 variables. The average of each variable, for each of the 6 activities, and for each of the 30 subjects, was estimated.
+
+The summary choices and the transformations 
+
+>To obtain the tidy data:
+-	Merge the training sets (y_train, subject_train, x_train) to create “data.train”
+-	Merge the test sets (y_test, subject_test, x_test) to create “data.test”
+-	Merge both data sets: “data.train” and “data.test” to create one data set “data.combine”
+-	Extract only the measurements on the mean() and standard deviation() for each measurement 
+-	Use descriptive activity names to name the activities in the data set according to the activity_labels.txt provided
+-	Appropriately label the data set with descriptive activity names according to the features.txt provided
+-	Create the independent tidy data set by applying the average for each activity and each subject on each remaining variable.
+
+>References
+
+[1] UCI Machine Learning Repository. Human activity recognition using smartphones data set. http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones# 
+
+[2] Using the Accelerometer in Silverlight for Windows Phone http://www.wintellect.com/blogs/jprosise/using-the-accelerometer-in-silverlight-for-windows-phone 
